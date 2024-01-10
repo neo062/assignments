@@ -12,8 +12,18 @@ const Assignment3 = () => {
     ]);
 
     // Your code starts here
-    const totalValue = 0;
+    const [totalValue, setTotalValue] = useState()
     // Your code ends here
+    useMemo(() => {
+        let sum = 0
+        items.map((item) => {
+            return (
+                sum = sum + Number(item.value)
+            )
+        })
+        setTotalValue(sum)
+    }, [])
+    console.log('totalValue', totalValue);
     return (
         <div>
             <ul>
